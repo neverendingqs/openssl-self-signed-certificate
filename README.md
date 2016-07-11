@@ -27,7 +27,7 @@ Email Address []:.
 # Install
 
 ```
-npm install --safe-dev openssl-self-signed-certificate
+npm install --save-dev openssl-self-signed-certificate
 ```
 
 # Example
