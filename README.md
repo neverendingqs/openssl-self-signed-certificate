@@ -24,3 +24,31 @@ Organizational Unit Name (eg, section) []:.
 Common Name (e.g. server FQDN or YOUR name) []:localhost
 Email Address []:.
 ```
+# Install
+
+```
+npm install --safe-dev openssl-self-signed-certificate
+```
+
+## Example
+
+```
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 3000;
+
+app.get('/', function(req, res) {
+    res.send('Hello World!');
+});
+
+app.listen(port);
+console.log(`HTTP started on port ${port}.`);
+
+if (process.env.NODE_ENV !== 'production') {
+    var https = require('https');
+    var options = require('openssl-self-signed-certificate');
+
+    https.createServer(options, app).listen(port + 1);
+	console.log(`HTTPS started on port ${port} (dev only).`);
+}
+```

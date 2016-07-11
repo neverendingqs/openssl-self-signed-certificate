@@ -1,6 +1,6 @@
 {
   "name": "openssl-self-signed-certificate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Self-signed certificate for development use, generated using openssl. Expires in the year 4754 (4754-06-06).",
   "main": "index.js",
   "scripts": {
