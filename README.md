@@ -54,6 +54,6 @@ if (process.env.NODE_ENV !== 'production') {
     };
 
     https.createServer(options, app).listen(port + 1);
-	console.log(`HTTPS started on port ${port + 1} (dev only).`);
+    console.log(`HTTPS started on port ${port + 1} (dev only).`);
 }
 ```
