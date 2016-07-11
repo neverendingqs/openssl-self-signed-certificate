@@ -46,9 +46,14 @@ console.log(`HTTP started on port ${port}.`);
 
 if (process.env.NODE_ENV !== 'production') {
     var https = require('https');
-    var options = require('openssl-self-signed-certificate');
+    var selfSigned = require('openssl-self-signed-certificate');
+
+    var options = {
+        key: selfSigned.key,
+        cert: selfSigned.cert
+    };
 
     https.createServer(options, app).listen(port + 1);
-	console.log(`HTTPS started on port ${port} (dev only).`);
+	console.log(`HTTPS started on port ${port + 1} (dev only).`);
 }
 ```
