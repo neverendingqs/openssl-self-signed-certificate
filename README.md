@@ -32,7 +32,7 @@ npm install --save-dev openssl-self-signed-certificate
 
 # Example
 
-```
+```js
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 3000;
