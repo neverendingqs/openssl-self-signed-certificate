@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/openssl-self-signed-certificate.svg)](https://badge.fury.io/js/openssl-self-signed-certificate)
+
 # openssl-self-signed-certificate
 
 Self-signed certificate for development use, generated using openssl. Expires in 4754-06-06.
